@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AliemDev</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+  <div class="wrap">
+    <!-- Header -->
+    <header>
+      <div class="brand">
+        <div class="logo">
+              <img src="img/logo.png">
+        </div>
+        <div>
+          <img src="img/banner.jpg">
+       </div>
+      </div>
+
+      <nav id="mainNav"></nav>
+
+      <div class="controls">
+        <button id="homeBtn" class="back-home">Home</button>
+        <button id="langToggle" class="lang-btn">ES</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="section">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>AliemDev</h1>
+          <p>hola soy un desarrollador indie en construct 3 y si te gustan mis vídeos y te suscribes te doy una galleta 🍪</p>
+          <div class="hero-cta">
+            <a  href="#games">Juegos</a>
+            <a  href="#youtube">YouTube</a>
+            <a  href="#gallery">Galeria</a>
+            <a  href="#about">Sobre Mi</a>
+            <a  href="#contact">Contacto</a>
+          </div>
+        </div>
+        <aside class="hero-aside">
+          <div class="subs-info">
+            <span id="subsCount">0</span> Suscriptores
+          </div>
+          <a id="visitChannel" class="btn-ghost" href="#youtube">Ver canal</a>
+        </aside>
+      </div>
+
+      <div class="section">
+        <h3>Últimos videos</h3>
+        <div id="lastVideos" class="cards"></div>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section id="games" class="section hidden">
+      <h2>Games</h2>
+      <button class="back-home" onclick="routeTo('#home')">Home</button>
+      <h3>Itch.io</h3>
+      <div id="itchGames" class="cards">
+            
+      </div>
+
+      <h3>Jugables en la web</h3>
+      <div id="webGames" class="cards">
+            
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="gallery" class="section hidden">
+      <h2>Galería</h2>
+      <button class="back-home" onclick="routeTo('#home')">Home</button>
+      <div id="galleryGrid" class="grid-gallery"></div>
+    </section>
+
+    <!-- YouTube -->
+    <section id="youtube" class="section hidden">
+      <h2>YouTube</h2>
+      <button class="back-home" onclick="routeTo('#home')">Home</button>
+      <div id="youtubeList" class="cards"></div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="section hidden">
+      <h2>Sobre mí</h2>
+      <button class="back-home" onclick="routeTo('#home')">Home</button>
+      <p id="aboutText"></p>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact" class="section hidden">
+      <h2>Contacto</h2>
+      <button class="back-home" onclick="routeTo('#home')">Home</button>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <textarea id="message" placeholder="Mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+        <div id="formStatus"></div>
+      </form>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  <div class="socials" id="footerSocials">
+    <a href="https://github.com/AliemDev" target="_blank">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.youtube.com/@AliemDev-YT" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+    <a href="https://aliemdeb.itch.io/" target="_blank">
+      <i class="fa-brands fa-itch-io"></i>
+    </a>
+    <a href="mailto:tuemail@gmail.com" target="_blank">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://twitter.com/AliemDev_RTX" target="_blank">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </div>
+</footer>
+
+
+  <!-- Toast notifications -->
+  <div id="toastRoot"></div>
+
+  <!-- JS -->
+  <script src="scripts/script.js"></script>
+</body>
+</html>
