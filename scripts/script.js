@@ -96,3 +96,34 @@ document.getElementById("langToggle").addEventListener("click", () => {
 
 // 🚀 Iniciar
 loadData();
+
+// --- Navegación de secciones ---
+function routeTo(sectionId) {
+  // Ocultar todas las secciones
+  document.querySelectorAll(".section").forEach(sec => {
+    sec.classList.add("hidden");
+  });
+
+  // Mostrar solo la sección seleccionada
+  const section = document.querySelector(sectionId);
+  if (section) section.classList.remove("hidden");
+}
+
+// --- Configurar navegación desde los enlaces ---
+function setupNavigation() {
+  const navLinks = document.querySelectorAll("#mainNav a, .hero-cta a");
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const target = link.getAttribute("href");
+      routeTo(target);
+    });
+  });
+}
+
+// 🚀 Llamar cuando cargue la página
+loadData().then(() => {
+  setupNavigation();
+  routeTo("#home"); // Iniciar en Home
+});
