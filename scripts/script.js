@@ -90,9 +90,6 @@ document.getElementById("langToggle").addEventListener("click", () => {
   applyLanguage(nextLang);
 });
 
-// 🚀 Iniciar
-loadData();
-
 // --- Navegación de secciones ---
 function routeTo(sectionId) {
   // Ocultar todas las secciones
