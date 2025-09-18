@@ -46,16 +46,12 @@ function applyLanguage(lang) {
 
 // 3. Renderizar Juegos
 function renderGames() {
-    
-    const itch = document.getElementById("itchGames");
-    const webs = document.getElementById("webGames");
+  const itch = document.getElementById("itchGames");
+  const webs = document.getElementById("webGames");
   const { itchio, web } = siteData.games;
 
   const itchContainer = document.createElement("div");
   const webContainer = document.createElement("div");
-
-  itchContainer.innerHTML = "";
-  webContainer.innerHTML = "";
 
   itchio.forEach(game => {
     itchContainer.innerHTML += `
@@ -74,9 +70,9 @@ function renderGames() {
         <a href="${game.link}" target="_blank">Jugar</a>
       </div>`;
   });
-    
-  webContainer.append.child(webs);
-  itchContainer.append.child(itch);
+
+  webs.appendChild(webContainer);
+  itch.appendChild(itchContainer);
 }
 
 // 4. Renderizar Galería
