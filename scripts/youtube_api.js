@@ -1,8 +1,8 @@
 // scripts/youtube_api.js
 
 // --- Configuración ---
-const API_KEY = "AIzaSyBmIoNnOuHCpxVlv8PFmR5q9Be3Njv8eeI"; // ✅ ya con restricciones
-const CHANNEL_ID = "UCVwvHqtXyYBlnHyhlRsjkKQ";       // 👈 cámbialo por el tuyo real
+const API_KEY = "AIzaSyBmIoNnOuHCpxVlv8PFmR5q9Be3Njv8eeI";
+const CHANNEL_ID = "UCVwvHqtXyYBlnHyhlRsjkKQ";       
 const MAX_RESULTS = 6;
 
 // --- Función para cargar datos de YouTube ---
