@@ -115,8 +115,9 @@ function setupNavigation() {
   });
 }
 
-// 🚀 Llamar cuando cargue la página
 loadData().then(() => {
   setupNavigation();
-  routeTo("#home"); // Iniciar en Home
+  routeTo("#home");
+  loadYouTube(); // 🚀 ya lo tienes conectado
 });
+
