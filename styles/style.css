@@ -283,4 +283,28 @@ footer {
   .hero-text h1 {
     font-size: 1.8rem;
   }
+  .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+  }
+
+  .hero {
+    flex-direction: row; /* texto a la izquierda, aside a la derecha */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero-text {
+    max-width: 60%;
+  }
+
+  .hero-aside {
+    max-width: 35%;
+    text-align: center;
+  }
+  }
