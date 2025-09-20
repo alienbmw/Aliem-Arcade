@@ -1,14 +1,14 @@
+// scripts/youtube_api.js
 
-
-// --- YouTube API ---
-const API_KEY = "AIzaSyBmIoNnOuHCpxVlv8PFmR5q9Be3Njv8eeI"; // 🚨 reemplaza con tu clave
-const CHANNEL_ID = "UCVwvHqtXyYBlnHyhlRsjkKQ"; // 🚨 reemplaza con tu ID real
+// --- Configuración ---
+const API_KEY = "AIzaSyBmIoNnOuHCpxVlv8PFmR5q9Be3Njv8eeI"; // ✅ ya con restricciones
+const CHANNEL_ID = "UCVwvHqtXyYBlnHyhlRsjkKQ";       // 👈 cámbialo por el tuyo real
 const MAX_RESULTS = 6;
 
-// Función para cargar subs + videos
+// --- Función para cargar datos de YouTube ---
 async function loadYouTube() {
   try {
-    // 1. Obtener suscriptores
+    // 1. Suscriptores
     const subsRes = await fetch(
       `https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${CHANNEL_ID}&key=${API_KEY}`
     );
@@ -16,7 +16,7 @@ async function loadYouTube() {
     const subsCount = subsData.items[0].statistics.subscriberCount;
     document.getElementById("subsCount").textContent = subsCount;
 
-    // 2. Obtener últimos videos
+    // 2. Últimos videos
     const vidsRes = await fetch(
       `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=${MAX_RESULTS}`
     );
