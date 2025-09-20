@@ -274,22 +274,8 @@ footer {
   .hero {
     grid-template-columns: 1fr;
   }
-}
-
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-  .cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-  .cards {
+  
+   .cards {
     grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
   }
 
@@ -307,4 +293,18 @@ footer {
     max-width: 35%;
     text-align: center;
   }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+  .cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
   }
