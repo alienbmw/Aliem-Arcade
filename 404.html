@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>404 not found</title>
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #000;
+     
+    }
+
+    .error{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .error img{
+      width: 120px;
+      height: auto;
+      border-radius: 50px;
+      border: 5px solid #fff;
+    }
+
+    .error h1{
+      font-size: 100px;
+      color: #fff;
+    }
+    
+    .stars{
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 10px;
+  height: 10px;
+  background: white;
+
+  animation: blink 2s infinite alternate;
+
+  box-shadow:
+    50px 80px white,
+    150px 200px white,
+    300px 120px white,
+    450px 260px white,
+    600px 90px white,
+    750px 300px white,
+    900px 140px white,
+    1050px 60px white;
+}
+
+@keyframes blink{
+  from{
+    opacity: 0.2;
+  }
+  to{
+    opacity: 1;
+  }
+}
+ 
+  </style>
+</head>
+
+<body>
+  
+  <div class="error">
+    <div class="stars"></div>
+    <h1>4</h1>
+    <img src="assets/aliem.gif" alt="alien">
+    <h1>4</h1>
+    <div class="stars"></div>
+  </div>
+
+</body>
+</html>
