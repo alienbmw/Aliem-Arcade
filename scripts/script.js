@@ -2,7 +2,20 @@ let siteData = {};       // Aquí guardaremos el JSON
 let currentLang = "es";  // Idioma por defecto
 
 //app
+// 1. Cargar datos del JSON
+async function loadData() {
+  try {
+    const res = await fetch("data/data.json");
+    siteData = await res.json();
+    applyLanguage(currentLang);  // Aplicar idioma inicial
+    renderGallery();
+  } catch (err) {
+    console.error("Error cargando data.json:", err);
+  }
+}
 
+// Temporal: aquí iba tu código de YouTube (ver nota abajo)
+//function loadYouTube() {}
 
 // 2. Cambiar idioma dinámicamente
 function applyLanguage(lang) {
