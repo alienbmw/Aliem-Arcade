@@ -1,0 +1,54 @@
+{
+  "languages": {
+    "es": {
+      "nav": ["Home", "Gamesa", "Galería", "YouTube", "Sobre mí", "Contacto"],
+      "home": {
+        "welcome": "Hola soy un desarrollador indie en Construct 3",
+        "cta": "Si te gustan mis vídeos y te suscribes, te doy una galleta 🍪"
+      },
+      "about": "Soy AliemDev, un desarrollador indie que crea juegos en Construct 3. Comparto mis proyectos en YouTube y subo mis juegos a Itch.io.",
+      "contact": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "send": "Enviar"
+      }
+    },
+    "en": {
+      "nav": ["Home", "Gamesa", "Gallery", "YouTube", "About Me", "Contact"],
+      "home": {
+        "welcome": "Hi, I’m an indie developer using Construct 3",
+        "cta": "If you like my videos and subscribe, I’ll give you a cookie 🍪"
+      },
+      "about": "I’m AliemDev, an indie developer who makes games in Construct 3. I share my projects on YouTube and publish games on Itch.io.",
+      "contact": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send"
+      }
+    }
+  },
+
+  "games": {
+    "itchio": [
+      {
+        "title": "Endris Kart",
+        "thumb": "https://img.itch.zone/aW1hZ2UvMzg0MDI1MS8yMjkwMzc0NC5wbmc=/794x1000/nuQfoL.png",
+        "link": "https://aliemdeb.itch.io/endris-kart3d"
+      }
+    ],
+    "web": [
+      {
+        "title": "Shooter Demo",
+        "thumb": "https://placehold.co/300x180/png?text=Shooter",
+        "link": "https://tuweb.com/shooter"
+      }
+    ]
+  },
+
+  "gallery": [
+    "https://placehold.co/300x180/png?text=Imagen+1",
+    "https://placehold.co/300x180/png?text=Imagen+2"
+  ]
+}
