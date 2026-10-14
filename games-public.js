@@ -5,7 +5,7 @@
   3. Cambia API por la URL de tu API en Render.
 */
 (function () {
-  const API = "https://TU-API.onrender.com";
+  const API = "https://arcade-neuv.onrender.com";
   const CACHE_KEY = "aliem_games_cache";
   const box = document.getElementById("games-list");
   if (!box) return;
