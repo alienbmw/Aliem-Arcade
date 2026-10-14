@@ -1,18 +1,8 @@
 let siteData = {};       // Aquí guardaremos el JSON
 let currentLang = "es";  // Idioma por defecto
 
-// 1. Cargar JSON al iniciar
-async function loadData() {
-  try {
-    const res = await fetch("data/data.json");
-    siteData = await res.json();
-    applyLanguage(currentLang);  // Aplicar idioma inicial
-    renderGames();
-    renderGallery();
-  } catch (err) {
-    console.error("Error cargando data.json:", err);
-  }
-}
+//app
+
 
 // 2. Cambiar idioma dinámicamente
 function applyLanguage(lang) {
@@ -44,36 +34,8 @@ function applyLanguage(lang) {
   document.getElementById("langToggle").textContent = lang.toUpperCase();
 }
 
-// 3. Renderizar Juegos
-function renderGames() {
-  const itch = document.getElementById("itchGames");
-  const webs = document.getElementById("webGames");
-  const { itchio, web } = siteData.games;
+// render
 
-  const itchContainer = document.createElement("div");
-  const webContainer = document.createElement("div");
-
-  itchio.forEach(game => {
-    itchContainer.innerHTML += `
-      <div class="card">
-        <img src="${game.thumb}" alt="${game.title}">
-        <h4>${game.title}</h4>
-        <a href="${game.link}" target="_blank">Jugar</a>
-      </div>`;
-  });
-
-  web.forEach(game => {
-    webContainer.innerHTML += `
-      <div class="card">
-        <img src="${game.thumb}" alt="${game.title}">
-        <h4>${game.title}</h4>
-        <a href="${game.link}" target="_blank">Jugar</a>
-      </div>`;
-  });
-
-  webs.appendChild(webContainer);
-  itch.appendChild(itchContainer);
-}
 
 // 4. Renderizar Galería
 function renderGallery() {
